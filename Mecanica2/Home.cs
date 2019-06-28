@@ -34,7 +34,7 @@ namespace Mecanica2
 
         private void menuCliente_Click_1(object sender, EventArgs e)
         {
-            ClienteLstView cliente = new ClienteLstView();
+            ClienteView cliente = new ClienteView();
             cliente.Show();
         }
     }

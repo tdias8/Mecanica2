@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,11 +25,15 @@ namespace Mecanica2.BLL
             
         }
 
-        public void listar (Cliente cliente)
+        public DataTable listar ()
         {
             try
             {
-                clienteDAO.listar(cliente);
+                DataTable dt = new DataTable();
+
+                dt = clienteDAO.listar();
+
+                return dt;
             }
             catch (Exception erro)
             {

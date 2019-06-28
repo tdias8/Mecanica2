@@ -64,12 +64,6 @@
     <Compile Include="Atendimento.cs" />
     <Compile Include="BLL\ClienteBLL.cs" />
     <Compile Include="Cliente.cs" />
-    <Compile Include="ClienteLstView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClienteLstView.Designer.cs">
-      <DependentUpon>ClienteLstView.cs</DependentUpon>
-    </Compile>
     <Compile Include="ClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,9 +100,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ClienteLstView.resx">
-      <DependentUpon>ClienteLstView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </EmbeddedResource>

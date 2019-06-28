@@ -9,7 +9,7 @@ namespace Mecanica2
    public class Cliente : Pessoa
     {
         public string endereco { get; set; }
-        public string dtNascimento { get; set; }
+        public string dtnascimento { get; set; }
         public string sexo { get; set; }
         public string estadoCivil { get; set; }
         public string ativo { get; set; }

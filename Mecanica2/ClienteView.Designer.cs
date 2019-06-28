@@ -41,7 +41,7 @@
             this.txtEstadoCivil = new System.Windows.Forms.TextBox();
             this.estadocivil = new System.Windows.Forms.Label();
             this.sexo = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtNascimento = new System.Windows.Forms.DateTimePicker();
             this.dtnasc = new System.Windows.Forms.Label();
             this.panelSituacao = new System.Windows.Forms.Panel();
             this.rInativo = new System.Windows.Forms.RadioButton();
@@ -57,8 +57,12 @@
             this.menuServico = new System.Windows.Forms.ToolStripLabel();
             this.menuSair = new System.Windows.Forms.ToolStripLabel();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.dgDados = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelSituacao.SuspendLayout();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDados)).BeginInit();
             this.SuspendLayout();
             // 
             // nome
@@ -169,19 +173,19 @@
             this.sexo.Text = "Sexo:";
             this.sexo.Click += new System.EventHandler(this.label8_Click);
             // 
-            // dateTimePicker1
+            // dtNascimento
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(590, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(101, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNascimento.Location = new System.Drawing.Point(341, 121);
+            this.dtNascimento.Name = "dtNascimento";
+            this.dtNascimento.Size = new System.Drawing.Size(101, 20);
+            this.dtNascimento.TabIndex = 3;
+            this.dtNascimento.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dtnasc
             // 
             this.dtnasc.AutoSize = true;
-            this.dtnasc.Location = new System.Drawing.Point(480, 73);
+            this.dtnasc.Location = new System.Drawing.Point(231, 125);
             this.dtnasc.Name = "dtnasc";
             this.dtnasc.Size = new System.Drawing.Size(104, 13);
             this.dtnasc.TabIndex = 19;
@@ -304,7 +308,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(603, 301);
+            this.btnSalvar.Location = new System.Drawing.Point(354, 180);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(88, 34);
             this.btnSalvar.TabIndex = 10;
@@ -312,19 +316,54 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // dgDados
+            // 
+            this.dgDados.AllowUserToAddRows = false;
+            this.dgDados.AllowUserToDeleteRows = false;
+            this.dgDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDados.Location = new System.Drawing.Point(448, 66);
+            this.dgDados.Name = "dgDados";
+            this.dgDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgDados.Size = new System.Drawing.Size(344, 351);
+            this.dgDados.TabIndex = 31;
+            this.dgDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDados_CellContentClick);
+            this.dgDados.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDados_CellContentDoubleClick);
+            this.dgDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDados_CellDoubleClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(354, 221);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 34);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Salvar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(354, 263);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 34);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Salvar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // ClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgDados);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.listsexo);
             this.Controls.Add(this.panelSituacao);
             this.Controls.Add(this.situacao);
             this.Controls.Add(this.dtnasc);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtNascimento);
             this.Controls.Add(this.sexo);
             this.Controls.Add(this.txtEstadoCivil);
             this.Controls.Add(this.estadocivil);
@@ -345,6 +384,7 @@
             this.panelSituacao.PerformLayout();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +404,7 @@
         private System.Windows.Forms.TextBox txtEstadoCivil;
         private System.Windows.Forms.Label estadocivil;
         private System.Windows.Forms.Label sexo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtNascimento;
         private System.Windows.Forms.Label dtnasc;
         private System.Windows.Forms.Panel panelSituacao;
         private System.Windows.Forms.RadioButton rInativo;
@@ -380,5 +420,8 @@
         private System.Windows.Forms.ToolStripLabel menuServico;
         private System.Windows.Forms.ToolStripLabel menuSair;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.DataGridView dgDados;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
